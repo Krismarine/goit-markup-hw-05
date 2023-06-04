@@ -645,8 +645,8 @@ a {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(360deg);
-  transition: transform 3000ms;
+    transform: translate(-50%, -50%) rotate(360deg) scale(1);
+    transition: transform 2500ms;
     width: 408px;
     min-height: 584px;
     background-color: #FCFCFC;
@@ -679,6 +679,6 @@ a {
     pointer-events: none;
 }
 .backdrop.is-hidden .modal{
-    transform: translate(-50%, -50%) rotate(360deg);
-   transition: transform 3000ms;
+    transform: translate(-50%, -50%) rotate(180deg) scale(0);
+    transition: transform 2000ms;
 }
