@@ -114,6 +114,7 @@ a {
     transform: scale(0);
     transform-origin: left;
     transition: transform 250ms var(--animation-delay);
+    bottom: -1px;
 }
 
 .link-header:last-child{
@@ -151,11 +152,11 @@ a {
     padding-top: 24px;
     padding-bottom: 24px;
     display: block;
+    transition: color 250ms var(--animation-delay); 
     
 }
 .link-address:hover , .link-address:focus {
     color: var(--pressed-state-color);
-    transition: color 250ms var(--animation-delay); 
 }
 .link-address:last-child{
     margin-right: 0;
@@ -209,11 +210,11 @@ a {
     padding: 16px 32px;
     margin: auto;
     cursor: pointer;
+    transition: background-color 250ms var(--animation-delay);
 }
 
 .order-btn:hover , .order-btn:focus {
     background-color: var(--pressed-state-color);
-    transition: background-color 250ms var(--animation-delay);
 }
 
 /*FEATURES*/
@@ -375,13 +376,13 @@ a {
    color: var(--light-cloud-color);
    border-radius: 50%;
    background-color: var(--primary-brand-color);
+   transition: background-color 250ms var(--animation-delay);
 }
 .soc-icon{
     fill: currentColor;
 }
 .link-soc-icon:hover{
     background-color: var(--pressed-state-color);
-    transition: background-color 250ms var(--animation-delay);
 }
 .link-soc-icon:focus{
     background-color: var(--pressed-state-color);
@@ -423,6 +424,8 @@ a {
     border-radius: 4px;
     border: 1px solid var(--customers-color);
     color: var(--customers-color);
+    transition: color 250ms var(--animation-delay), 
+    border-color 250ms var(--animation-delay);
 }
 .customers-icon {
     fill: currentColor;
@@ -430,12 +433,10 @@ a {
 .link-customers-icon:hover {
     border-color: var(--pressed-state-color);
     color: var(--pressed-state-color);
-    transition: color 250ms var(--animation-delay), border-color 250ms var(--animation-delay);
 }
 .link-customers-icon:focus {
     border-color: var(--pressed-state-color);
     color: var(--pressed-state-color);
-    transition: color 250ms var(--animation-delay), border-color 250ms var(--animation-delay);
 }
 
 /* FOOTER */
@@ -498,17 +499,16 @@ a {
     border-radius: 50%;
     background-color:var(--primary-brand-color);
     color: var(--light-cloud-color);
+    transition: background-color 250ms var(--animation-delay);
 }
 .footer-soc {
     fill: currentColor;
 }
 .link-footer-soc-icon:hover  {
     background-color: #31D0AA;
-    transition: background-color 250ms var(--animation-delay);
 }
 .link-footer-soc-icon:focus {
    background-color: #31D0AA; 
-   transition: background-color 250ms var(--animation-delay);
 }
 
 /* PORTFOLIO PAGE */
@@ -645,8 +645,8 @@ a {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(360deg) scale(1);
-    transition: transform 2500ms;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms var(--animation-delay);
     width: 408px;
     min-height: 584px;
     background-color: #FCFCFC;
@@ -654,10 +654,12 @@ a {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12), 
     0px 2px 1px rgba(0, 0, 0, 0.2);
-    padding-top: 24px;
-    padding-right: 24px;
 }
 .close-btn{
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -668,17 +670,26 @@ a {
     cursor: pointer;
     background-color: var(--borders-accent-color);
     margin-left: auto;
+    transition: backgruond-color 250ms var(--animation-delay),
+    border 250ms var(--animation-delay);
       
 }
+
+.close-btn:hover, .close-btn:focus{
+    background-color: var(--pressed-state-color);
+    color: var(--background-color);
+    border: none;
+}
 .icon-close-back{
-    color: currentColor;
+    fill: currentColor;
+    transition: fill 250ms var(--animation-delay);
 }
 .is-hidden{
-    visibility: none;
+    visibility: hidden;
     opacity: 0;
     pointer-events: none;
 }
 .backdrop.is-hidden .modal{
     transform: translate(-50%, -50%) rotate(180deg) scale(0);
-    transition: transform 2000ms;
+    transition: transform 250ms var(--animation-delay);
 }
