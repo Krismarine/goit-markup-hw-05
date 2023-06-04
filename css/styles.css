@@ -536,6 +536,10 @@ a {
     border: 1px solid var(--borders-accent-color);
     padding: 12px 24px;
     min-width: 69px;
+    transition: background-color 250ms var(--animation-delay),
+    color 250ms var(--animation-delay), 
+    box-shadow 250ms var(--animation-delay),
+    border-color 250ms var(--animation-delay);
 }
 .filter-item:hover, .filter-item:focus {
     background-color: var(--pressed-state-color);
@@ -545,7 +549,6 @@ a {
     box-shadow:0px 2px 2px 0px rgba(0, 0, 0, 0.12),
     0px 2px 1px 0px rgba(0, 0, 0, 0.08),
     0px 3px 1px 0px rgba(0, 0, 0, 0.1);
-    transition: background-color 250ms var(--animation-delay), color 250ms var(--animation-delay), box-shadow 250ms var(--animation-delay);
 }
 
 .product-set {
@@ -569,6 +572,7 @@ a {
 }
 .link-product{
     display: block;
+    transition: box-shadow 250ms var(--animation-delay);
 }
 
 
@@ -577,7 +581,6 @@ a {
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
     cursor: pointer;
-    transition: box-shadow 250ms var(--animation-delay);
 }
 
 .title-product {
@@ -611,9 +614,6 @@ a {
 
 }
 
-
-
-
 .overlay-text{  
     position: absolute;
     font-weight: 400;
@@ -630,9 +630,12 @@ a {
 }
 .link-product:hover .overlay-text{
     transform: translateY(0);
-    transition: transform 250ms var(--animation-delay);
-}
 
+}
+.link-product:focus .overlay-text{
+    transform: translateY(0);
+
+}
 .backdrop{
     position: fixed;
     width: 100%;
